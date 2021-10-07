@@ -11,13 +11,13 @@ In order to use this schema, you have to add it to VSCode in one of two ways:
 
 Either way, you'll need to open your preferences in JSON form:
 
-![JSON-Settings](JSON-Settings-Cropped.png)
+![JSON-Settings](../assets/img/JSON-Settings-Cropped.png)
 
 Once you have that open, you'll need to add the following setting:
 
 ```json
 "yaml.schemas": {
-  "https://raw.githubusercontent.com/4lch4-Industries/JSON-Schemas/main/Espanso-Config.json": [
+  "https://raw.githubusercontent.com/4lch4-Industries/JSON-Schemas/main/Espanso/Config.json": [
     "default.yml",
     "default.yaml",
     "package.yml",
