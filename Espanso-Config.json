@@ -4,6 +4,69 @@
   "description": "A cross-platform Text Expander written in Rust",
   "type": "object",
   "additionalProperties": false,
+  "definitions": {
+    "match": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "description": "The text to type in order to trigger the replacement."
+        },
+        "replace": {
+          "type": "string",
+          "description": "The text to replace the trigger with."
+        },
+        "word": {
+          "type": "boolean",
+          "description": "Tells telling espanso to only trigger that match if surrounded by word separators ( such as spaces, commas and newlines).",
+          "default": false
+        },
+        "propagate_case": {
+          "type": "boolean",
+          "default": false
+        },
+        "image_path": {
+          "type": "string",
+          "description": "The path to the image that will replace the trigger text."
+        },
+        "vars": {
+          "type": "array",
+          "description": "An array of variables to use within the replacement.",
+          "items": {
+            "type": "object",
+            "description": "A variable to be used for dynamic matches.",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the variable."
+              },
+              "type": {
+                "type": "string",
+                "description": "The data type of the variable.",
+                "oneOf": [
+                  {
+                    "const": "date"
+                  },
+                  {
+                    "const": "shell"
+                  },
+                  {
+                    "const": "dummy"
+                  }
+                ]
+              },
+              "params": {
+                "type": "object",
+                "description": "The parameters to be used for generating the variable value.",
+                "properties": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "properties": {
     "backend": {
       "type": "string",
@@ -163,6 +226,17 @@
     "name": {
       "type": "string",
       "description": "The name of the current configuration."
+    },
+    "matches": {
+      "type": "array",
+      "description": "An array of match objects with a trigger/replacement value.",
+      "items": {
+        "$ref": "#/definitions/match"
+      }
+    },
+    "version": {
+      "type": "number",
+      "description": "The version of the configuration."
     }
   }
 }
