@@ -235,7 +235,7 @@
       }
     },
     "version": {
-      "type": "number",
+      "type": "string",
       "description": "The version of the configuration."
     }
   }
