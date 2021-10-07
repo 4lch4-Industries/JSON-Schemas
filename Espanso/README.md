@@ -36,12 +36,14 @@ Now, let's break this down a bit so you understand what this is doing:
    - Defines any custom schema objects that aren't in the [SchemaStore][2], such as this one. Down the road I would like for this schema to be added to the SchemaStore, but for now this will have to do.
 2. **Line 2** (<https://raw.githubusercontent.com/...>)
    - This line defines the URL where the custom schema can be found.
-3. **Lines 3-10** (`*.yml/yaml`)
+3. **Lines 3-10** (`*.yml/*.yaml`)
    - This line defines the files that the schema should be applied to.
    - The standard Espanso config file is `default.yml` or `default.yaml`.
    - Packages can either be nested in the `user` directory, or within a `packages` directory.
 
 At this point, you can reload VS Code and open an Espanso config file to see it in action:
+
+![Espanso-Config-IntelliSense](../assets/img/Espanso-Config-IntelliSense.png)
 
 [0]: https://espanso.org/
 [1]: https://espanso.org/docs/configuration/
