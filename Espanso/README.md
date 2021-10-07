@@ -43,9 +43,6 @@ Now, let's break this down a bit so you understand what this is doing:
 
 At this point, you can reload VS Code and open an Espanso config file to see it in action:
 
-
-
-
 [0]: https://espanso.org/
 [1]: https://espanso.org/docs/configuration/
 [2]: https://www.schemastore.org/json/

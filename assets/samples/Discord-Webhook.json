@@ -24,14 +24,10 @@
   "additionalProperties": false,
   "anyOf": [
     {
-      "required": [
-        "content"
-      ]
+      "required": ["content"]
     },
     {
-      "required": [
-        "embeds"
-      ]
+      "required": ["embeds"]
     }
   ],
   "properties": {
@@ -95,9 +91,7 @@
             "description": "Footer information",
             "type": "object",
             "additionalProperties": false,
-            "required": [
-              "text"
-            ],
+            "required": ["text"],
             "properties": {
               "text": {
                 "description": "Footer text\nMax is 2048 characters",
@@ -115,9 +109,7 @@
             "description": "Image information",
             "type": "object",
             "additionalProperties": false,
-            "required": [
-              "url"
-            ],
+            "required": ["url"],
             "properties": {
               "url": {
                 "description": "Source url of image\nOnly support http / https",
@@ -129,9 +121,7 @@
             "description": "Thumbnail information",
             "type": "object",
             "additionalProperties": false,
-            "required": [
-              "url"
-            ],
+            "required": ["url"],
             "properties": {
               "url": {
                 "description": "Source url of thumbnail\nOnly support http / https",
@@ -143,9 +133,7 @@
             "description": "Author information",
             "type": "object",
             "additionalProperties": false,
-            "required": [
-              "name"
-            ],
+            "required": ["name"],
             "properties": {
               "name": {
                 "description": "Name of author\nMax is 256 characters",
@@ -169,10 +157,7 @@
               "description": "Fields information",
               "type": "object",
               "additionalProperties": false,
-              "required": [
-                "name",
-                "value"
-              ],
+              "required": ["name", "value"],
               "properties": {
                 "name": {
                   "description": "Name of the field\nREQUIRED Max is 256",
@@ -208,19 +193,12 @@
           "default": [],
           "items": {
             "type": "string",
-            "enum": [
-              "roles",
-              "users",
-              "everyone"
-            ]
+            "enum": ["roles", "users", "everyone"]
           }
         },
         "roles": {
           "description": "Array of role_ids to mention\nMax is 100 of role_ids\nMutually exclusive with parse roles",
-          "type": [
-            "array",
-            "null"
-          ],
+          "type": ["array", "null"],
           "default": [],
           "uniqueItems": true,
           "maxItems": 100,
@@ -230,10 +208,7 @@
         },
         "users": {
           "description": "Array of user_ids to mention\nMax is 100 of user_ids\nMutually exclusive with parse users",
-          "type": [
-            "array",
-            "null"
-          ],
+          "type": ["array", "null"],
           "default": [],
           "uniqueItems": true,
           "maxItems": 100,
