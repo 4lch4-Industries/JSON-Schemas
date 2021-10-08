@@ -8,7 +8,6 @@
   ],
   "type": "object",
   "additionalProperties": true,
-  "definitions": {},
   "properties": {
     "name": {
       "type": "string",
