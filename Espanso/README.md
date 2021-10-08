@@ -18,15 +18,15 @@ Once you have that open, you'll need to add the following setting:
 ```json
 "yaml.schemas": {
   "https://raw.githubusercontent.com/4lch4-Industries/JSON-Schemas/main/Espanso/Config.json": [
-    "default.yml",
-    "default.yaml",
-    "package.yml",
-    "package.yaml",
-    "user/**/*.yml",
-    "user/**/*.yaml",
-    "packages/**/*.yaml",
-    "packages/**/*.yml"
-  ]
+     "espanso/**/default.yml",
+     "espanso/**/default.yaml",
+     "espanso/**/package.yml",
+     "espanso/**/package.yaml",
+     "espanso/**/user/**/*.yml",
+     "espanso/**/user/**/*.yaml",
+     "espanso/**/packages/**/*.yaml",
+     "espanso/**/packages/**/*.yml"
+   ]
 }
 ```
 
@@ -40,6 +40,7 @@ Now, let's break this down a bit so you understand what this is doing:
    - This line defines the files that the schema should be applied to.
    - The standard Espanso config file is `default.yml` or `default.yaml`.
    - Packages can either be nested in the `user` directory, or within a `packages` directory.
+   - All of them should be under an `espanso` directory, so that's the first check.
 
 At this point, you can reload VS Code and open an Espanso config file to see it in action:
 
