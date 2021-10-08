@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for Espanso Packages Readme",
+  "description": "The front matter that goes along with an Espanso Package.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "package_name": {
+      "type": "string",
+      "description": "The name of the package (must be the same as the directory)."
+    },
+    "package_title": {
+      "type": "string",
+      "description": "Human friendly version of the package name."
+    },
+    "package_desc": {
+      "type": "string",
+      "description": "A short description of the package & its contents."
+    },
+    "package_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "The version of the package, you should not change this one when you first start your package."
+    },
+    "package_author": {
+      "type": "string",
+      "description": "Your name/alias."
+    },
+    "package_repo": {
+      "type": "string",
+      "description": "The URL of repository for this package."
+    }
+  }
+}
