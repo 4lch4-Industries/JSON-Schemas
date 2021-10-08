@@ -1,0 +1,37 @@
+{
+  "schema": "https://json-schema.org/draft/2020-12/schema",
+  "url": "https://github.com/4lch4/",
+  "title": "4lch4 API Config",
+  "description": "The default schema for an API created by myself (4lch4) or my company (4lch4 Industries, LLC.)",
+  "fileMatch": [
+    "local.settings.json"
+  ],
+  "type": "object",
+  "additionalProperties": true,
+  "definitions": {},
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the API"
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of the API using the Semantic Versioning standard."
+    },
+    "port": {
+      "type": "number",
+      "description": "The port number that the API should listen on.",
+      "default": 8080
+    },
+    "apiPrefix": {
+      "type": "string",
+      "description": "The string value to be placed before all endpoints."
+    }
+  },
+  "required": [
+    "name",
+    "version",
+    "port",
+    "apiPrefix"
+  ]
+}
