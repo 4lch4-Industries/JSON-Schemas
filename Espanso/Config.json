@@ -1,7 +1,18 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "url": "https://json.schemastore.org/Espanso-Config.json",
   "title": "JSON Schema for Espanso",
   "description": "A cross-platform Text Expander written in Rust",
+  "fileMatch": [
+    "espanso/**/default.yml",
+    "espanso/**/default.yaml",
+    "espanso/**/package.yml",
+    "espanso/**/package.yaml",
+    "espanso/**/user/**/*.yml",
+    "espanso/**/user/**/*.yaml",
+    "espanso/**/packages/**/*.yaml",
+    "espanso/**/packages/**/*.yml"
+  ],
   "type": "object",
   "additionalProperties": false,
   "definitions": {
