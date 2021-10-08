@@ -70,6 +70,7 @@
   "properties": {
     "backend": {
       "type": "string",
+      "description": "The typing engine used. Inject simulate keypresses, Clipboard simulates a copy/paste, Auto is available on Linux only and combines the two previous.",
       "oneOf": [
         {
           "const": "Clipboard",
